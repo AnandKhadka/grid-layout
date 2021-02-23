@@ -1,0 +1,107 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+.wrapper{
+    display: grid;
+    gap: 0.3rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "title title title"
+    "banner banner offer1"
+    "banner banner offer2"
+    "side-menu main main"
+    "recent main main"
+    "tags main main"
+    "footer footer footer"
+
+}
+.wrapper > * {
+    padding: 0.3rem;
+    font-size: 24px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    background-color: red;
+    grid-area: header;
+}
+.title{
+    background-color: greenyellow;
+    grid-area: title;
+}
+.main-banner{
+    background-color: blue;
+    grid-area: banner;
+}
+.offer1{
+    background-color: yellow;
+    grid-area: offer1;
+}
+.offer2{
+    background-color: orange;
+    grid-area: offer2;
+}
+.side-menu{
+    background-color: pink;
+    grid-area: side-menu;
+}
+.tags{
+    background-color: brown;
+    grid-area: tags;
+}
+.recent{
+    background-color: purple;
+    grid-area: recent;
+}
+.main{
+    background-color: red;
+    grid-area: main;
+}
+footer{
+    background-color: palevioletred;
+    grid-area: footer;
+}
+
+@media(max-width:768px){
+    .wrapper{
+        display: grid;
+        gap: 0.3rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "header header"
+        "title title"
+        "banner banner"
+        "offer1 offer2"
+        "main main"
+        "side-menu side-menu"
+        "recent tags"
+        "footer footer"
+    
+    } 
+}
+
+
+
+@media (max-width:576px){
+    .wrapper{
+        display: grid;
+        gap: 0.3rem;
+        grid-template-columns: auto;
+        grid-template-areas:
+        "header"
+        "title"
+        "banner "
+        "offer1"
+        "offer2"
+        "main"
+        "side-menu"
+        "recent"
+        "tags"
+        "footer"
+    
+    }
+}
